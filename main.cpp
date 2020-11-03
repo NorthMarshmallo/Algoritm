@@ -44,7 +44,7 @@ void DrawLineBrez(int x1, int y1, int x2, int y2, TGAImage& Image) {
 		swap(dx, dy);
 		flag = true;
 	}
-	double d = 2 * dy - dx;
+	double d = 2 * abs(dy) - abs(dx);
 	while (x != x2) {
 		if (flag == true)
 			Image.set(round(y), round(x), red);
